@@ -14,17 +14,14 @@ session_start();
 	<header>
 		<?php
 			include "header_content.php";
-			echo "<p>Thank you ", $_GET["fName"], " ", $_GET["lName"], " (", $_GET["regID"], ") for participating in Kuching Marathon!</p>";
+			echo "<p>Thank you ", $_SESSION["fName"], " ", $_SESSION["lName"], " (", $_SESSION["regID"], ") for participating in Kuching Marathon!</p>";
 		?>
 	</header>
 	
 	<article>
 		
 		<?php
-		$_SESSION["fName"] = $_GET["fName"];
-		$_SESSION["lName"] = $_GET["lName"];
-		$_SESSION["regID"] = $_GET["regID"];
-		$_SESSION["email"] = $_GET["email"];
+		
 		?>
 		
 		<form action="rating_summary.php" method="get">
