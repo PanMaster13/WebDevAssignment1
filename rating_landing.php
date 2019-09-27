@@ -22,29 +22,49 @@
 			$regID = $_GET["regID"];
 			$email = $_GET["email"];
 			
-			// Checking First Name Value
-			if (empty($firstName))
+			// Checking Registration ID Value
+			if (empty($regID)
 			{
-				$message .= "First Name is required.<br/>";
+				$message .= "Registration ID is required.<br/>";
 			}
 			else
 			{
-				if (!preg_match("/^[a-zA-Z ]*$/", $firstName))
+				$regID_array = explode('-', $regID);
+				$finalValid = false;
+				$valid1 = false;
+				$valid2 = false;
+				$valid3 = false;
+				
+				// Registration ID must be splitted into 3
+				if (count($regID_array) == 3)
 				{
-					$message .= "First Name is incorrect.<br/>";
+					// Checking first value of registration ID
+					if ($regID_array[0] == "KM")
+					{
+						$valid1 = true;
+					}
+					
+					// Checking second value of registration ID
+					if ($regID_array[1] == "10" or $regID_array[1] == "21" or $regID_array[1] == "42")
+					{
+						$valid2 = true;
+					}
+					
+					// Checking third value of registration ID
+					if (is_numeric($regID_array[2])
+					{
+						$valid3 = true;
+					}
+					
+					if ($valid1 == true and $valid2 == true and $valid3 == true)
+					{
+						$finalValid = true;
+					}
 				}
-			}
-			
-			// Checking Last Name Value
-			if (empty($lastName))
-			{
-				$message .= "Last Name is required.<br/>";
-			}
-			else
-			{
-				if (!preg_match("/^[a-zA-Z ]*$/", $LastName))
+				
+				if ($finalValid == false)
 				{
-					$message .= "Last Name is incorrect.<br/>";
+					$message .= "Registration ID is incorrect.<br/>";
 				}
 			}
 			
