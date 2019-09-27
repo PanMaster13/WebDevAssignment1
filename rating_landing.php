@@ -1,9 +1,14 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Rating Landing</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Jason">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
 </head>
 
 <body>
@@ -85,6 +90,10 @@
 			// Only move to next page if message is empty
 			if($message == "")
 			{
+				$_SESSION["fName"] = $_GET["fName"];
+				$_SESSION["lName"] = $_GET["lName"];
+				$_SESSION["regID"] = $_GET["regID"];
+				$_SESSION["email"] = $_GET["email"];
 				header("Location: rating_input.php");
 			}
 		}
@@ -98,9 +107,9 @@
 		<form action="rating_landing.php" method="get">
 		<p>First Name: <input type="text" name="fName"></p>
 		<p>Last Name: <input type="text" name="lName"></p>
-		<p>Registration ID: <input type="text" name="regID"></p>
+		<p>Registration ID: <input type="text" name="regID" placeholder="KM-xx-yyyy"></p>
 		<p>Email address: <input type="text" name="email"></p>
-		<p><input type="submit" name="submit_button"></p>
+		<p><input type="reset" name="reset_button"><input type="submit" name="submit_button"></p>
 		</form>
 	</article>
 	
