@@ -97,7 +97,7 @@ session_start();
 				</table>
 			";
 		?>
-		<p><input type="button" onclick="window.location.href='rating_landing.php'" value="OK"></p>
+		<p><input class="button" type="button" onclick="window.location.href='rating_landing.php'" value="OK"></p>
 	</article>
 	
 	<footer>

@@ -105,18 +105,19 @@
 	
 	<article>
 		<form action="rating_landing.php" method="get">
-		<p>First Name: <input type="text" name="fName"></p>
-		<p>Last Name: <input type="text" name="lName"></p>
-		<p>Registration ID: <input type="text" name="regID" placeholder="KM-xx-yyyy"></p>
-		<p>Email address: <input type="text" name="email"></p>
-		<p><input type="reset" name="reset_button"><input type="submit" name="submit_button"></p>
+		<p>First Name*: <input type="text" name="fName" required="required"></p>
+		<p>Last Name*: <input type="text" name="lName" required="required"></p>
+		<p>Registration ID*: <input type="text" name="regID" placeholder="KM-xx-yyyy"></p>
+		<p>Email address*: <input type="text" name="email"></p>
+		<p><input class="button" type="reset" name="reset_button"><input class="button" type="submit" name="submit_button"></p>
 		</form>
 	</article>
 	
 	<footer>
 		<?php
-			echo $message;
+			echo "<p>", $message, "</p>";
 		?>
 	</footer>
+
 </body>
 </html>

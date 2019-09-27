@@ -15,7 +15,7 @@ session_start();
 	<header>
 		<?php
 			include "header_content.php";
-			echo "<p>Thank you ", $_SESSION["fName"], " ", $_SESSION["lName"], " (", $_SESSION["regID"], ") for participating in Kuching Marathon!</p>";
+			echo "<p id='thanks'>Thank you ", $_SESSION["fName"], " ", $_SESSION["lName"], " (", $_SESSION["regID"], ") for participating in Kuching Marathon!</p>";
 		?>
 	</header>
 	
@@ -101,15 +101,15 @@ session_start();
 			<input type="radio" id="5e" name="security" value="5">
 			<label for="5e">Very Good</label>
 		</p>
-		<p><input type="submit" value="Next"></p>
+		<p><input class="button" type="submit" value="Next"></p>
 		</form>
+		
+		
 	</article>
 	
 	<footer>
 		<p id="error_msg"> </p>
 	</footer>
-	
-	
 	<script src="scripts/validation.js"></script>
 </body>
 </html>
