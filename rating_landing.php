@@ -82,11 +82,8 @@
 				}
 			}
 			
-			if ($message != "")
-			{
-				header("Location: rating_landing.php");
-			}
-			else if($message == "")
+			// Only move to next page if message is empty
+			if($message == "")
 			{
 				header("Location: rating_input.php");
 			}
