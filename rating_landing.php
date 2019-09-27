@@ -23,7 +23,7 @@
 			$email = $_GET["email"];
 			
 			// Checking Registration ID Value
-			if (empty($regID)
+			if (empty($regID))
 			{
 				$message .= "Registration ID is required.<br/>";
 			}
@@ -51,7 +51,7 @@
 					}
 					
 					// Checking third value of registration ID
-					if (is_numeric($regID_array[2])
+					if (is_numeric($regID_array[2]))
 					{
 						$valid3 = true;
 					}
@@ -95,7 +95,7 @@
 	?>
 	
 	<article>
-		<form action="validation1.php" method="get">
+		<form action="rating_landing.php" method="get">
 		<p>First Name: <input type="text" name="fName"></p>
 		<p>Last Name: <input type="text" name="lName"></p>
 		<p>Registration ID: <input type="text" name="regID"></p>
