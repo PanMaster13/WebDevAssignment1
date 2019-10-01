@@ -11,13 +11,15 @@
 	
 	$img = imagecreate(75, 38);
 	
-	$background = imagecolorallocate($img, 255, 255, 255);
+	$background = imagecolorallocate($img, 43, 25, 0);
 	
 	$text_color = imagecolorallocate($img, 33, 37, 41);
 	
 	$text = $math;
 	
-	$font = "arial.ttf";
+	putenv('GDFONTPATH=' . realpath('.'));
+	
+	$font = 'WetArial-Regular';
 	
 	imagettftext($img, 16, 0, 0, 26, $text_color, $font, $text);
 	
