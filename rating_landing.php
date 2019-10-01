@@ -109,6 +109,9 @@
 		<p>Last Name*: <input type="text" name="lName" required="required"></p>
 		<p>Registration ID*: <input type="text" name="regID" placeholder="KM-xx-yyyy"></p>
 		<p>Email address*: <input type="text" name="email"></p>
+		<p>
+			<img src="captcha.php"/>
+		</p>
 		<p><input class="button" type="reset" name="reset_button"><input class="button" type="submit" name="submit_button"></p>
 		</form>
 	</article>
