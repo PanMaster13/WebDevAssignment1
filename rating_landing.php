@@ -61,12 +61,14 @@
 						$valid3 = true;
 					}
 					
+					// Checking all 3 values of registration ID
 					if ($valid1 == true and $valid2 == true and $valid3 == true)
 					{
 						$finalValid = true;
 					}
 				}
 				
+				// Sets error message if there is error
 				if ($finalValid == false)
 				{
 					$message .= "Registration ID is incorrect.<br/>";
@@ -80,6 +82,7 @@
 			}
 			else
 			{
+				// Sets error message if there is error
 				// FILTER_VALIDATE_EMAIL is a PHP built-in constant to vaildate email
 				if (!filter_var($email, FILTER_VALIDATE_EMAIL))
 				{
@@ -87,7 +90,7 @@
 				}
 			}
 			
-			// Only move to next page if message is empty
+			// Only move to next page if error message is empty
 			if($message == "")
 			{
 				$_SESSION["fName"] = $_GET["fName"];
@@ -109,9 +112,7 @@
 		<p>Last Name*: <input type="text" name="lName" required="required"></p>
 		<p>Registration ID*: <input type="text" name="regID" placeholder="KM-xx-yyyy"></p>
 		<p>Email address*: <input type="text" name="email"></p>
-		<p>
-			<img src="captcha.php"/>
-		</p>
+		
 		<p><input class="button" type="reset" name="reset_button"><input class="button" type="submit" name="submit_button"></p>
 		</form>
 	</article>

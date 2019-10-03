@@ -21,7 +21,7 @@ session_start();
 	
 	<article>
 		<form id="Form" action="#" method="get" onsubmit="validateForm()">
-		<p>Registration & Payment: 
+		<p>Registration & Payment*: 
 			<input type="radio" id="1a" name="regPay" value="1">
 			<label for="1a">Very Poor</label>
 			
@@ -37,7 +37,7 @@ session_start();
 			<input type="radio" id="1e" name="regPay" value="5">
 			<label for="1e">Very Good</label>
 		</p>
-		<p>Event Timing: 
+		<p>Event Timing*: 
 			<input type="radio" id="2a" name="eventTime" value="1">
 			<label for="2a">Very Poor</label>
 			
@@ -53,7 +53,7 @@ session_start();
 			<input type="radio" id="2e" name="eventTime" value="5">
 			<label for="2e">Very Good</label>
 		</p>
-		<p>Race Route Selection: 
+		<p>Race Route Selection*: 
 			<input type="radio" id="3a" name="route" value="1">
 			<label for="3a">Very Poor</label>
 			
@@ -69,7 +69,7 @@ session_start();
 			<input type="radio" id="3e" name="route" value="5">
 			<label for="3e">Very Good</label>
 		</p>
-		<p>Logistic: 
+		<p>Logistic*: 
 			<input type="radio" id="4a" name="logic" value="1">
 			<label for="4a">Very Poor</label>
 			
@@ -85,7 +85,7 @@ session_start();
 			<input type="radio" id="4e" name="logic" value="5">
 			<label for="4e">Very Good</label>
 		</p>
-		<p>Security: 
+		<p>Security*: 
 			<input type="radio" id="5a" name="security" value="1">
 			<label for="5a">Very Poor</label>
 			

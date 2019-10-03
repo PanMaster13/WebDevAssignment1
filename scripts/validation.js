@@ -129,12 +129,12 @@ function validateForm()
 	
 	if ((regPay_valid && eventTime_valid && route_valid && logic_valid && security_valid) == true)
 	{
-		alert("Your form is valid");
+		alert("Your rating will now be saved.");
 		theForm.action = "rating_summary.php";
 	}
 	else
 	{
-		alert("Ding Dong, you are wrong. Go back to zero");
+		alert("You have not filled all the required sections.");
 		theForm.action = "rating_input.php";
 	}
 }

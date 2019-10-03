@@ -20,6 +20,7 @@ session_start();
 	
 	<article>
 		<?php
+			// Function to decided text value for Radio buttons
 			function checkValue($getName)
 			{
 				$result = "";
@@ -46,6 +47,7 @@ session_start();
 				return $result;
 			}
 			
+			// Setting values
 			$fName = $_SESSION["fName"];
 			$lName = $_SESSION["lName"];
 			$regID = $_SESSION["regID"];
@@ -56,6 +58,28 @@ session_start();
 			$logic = checkValue("logic");
 			$security = checkValue("security");
 			
+			// Writing data to file section
+			// fopen() opens the file while or die() prints error message if file has failed to be opened
+			$textFile = fopen("data.txt", "w") or die("Failed to open data file.");
+			
+			// Setting text file data
+			$dataText = "First name: $fName
+Last name: $lName
+Registration ID: $regID
+Email address: $email
+***Rating***
+Registration and payment: $regPay
+Event timing: $eventTime
+Race route selection: $route
+Logistic: $logic
+Security: $security";
+			
+			// Writing into text file
+			fwrite($textFile, $dataText);
+			// Close file
+			fclose($textFile);
+			
+			// Displaying data via PHP
 			echo "
 				<table>
 					<tr>
