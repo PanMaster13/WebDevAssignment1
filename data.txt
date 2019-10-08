@@ -1,10 +1,10 @@
-First name: lim
-Last name: teh
-Registration ID: KM-42-0900
-Email address: test@gmail.com
+First name: Jason Ang
+Last name: Wuen
+Registration ID: KM-42-0050
+Email address: r.mukuro00@hotmail.com
 ***Rating***
-Registration and payment: Very Poor
-Event timing: Poor
+Registration and payment: Very Good
+Event timing: Good
 Race route selection: Satisfactory
-Logistic: Good
-Security: Very Good
+Logistic: Poor
+Security: Very Poor

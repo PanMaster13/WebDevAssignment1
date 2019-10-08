@@ -19,17 +19,6 @@
 	</header>
 	
 	<?php
-		function init_Captcha()
-		{
-			$num1=rand(1,9);
-			$num2=rand(1,9);
-			$total=$num1+$num2;
-			
-			$_SESSION["total"] = $total;
-
-			$_SESSION["display"] = "$num1 + $num2 = ";
-		}
-		
 		if (isset($_GET["submit_button"]))
 		{
 			$message = "";
@@ -106,29 +95,12 @@
 			if (empty($captcha))
 			{
 				$message .= "Captcha must be filled.<br/>";
-				
-				$num1=rand(1,9);
-				$num2=rand(1,9);
-				$total=$num1+$num2;
-			
-				$_SESSION["total"] = $total;
-
-				$display = "$num1 + $num2 = ";
 			}
 			else
 			{
-				if(!($captcha == $_SESSION["total"]))
+				if($captcha != $_SESSION["total"])
 				{
 					$message .= "Captcha is incorrect. Please try the captcha again.<br/>";
-					
-					// Resets captcha value
-					$num1=rand(1,9);
-					$num2=rand(1,9);
-					$total=$num1+$num2;
-			
-					$_SESSION["total"] = $total;
-
-					$display = "$num1 + $num2 = ";
 				}
 			}
 			
@@ -145,13 +117,6 @@
 		else
 		{
 			$message = "";
-			$num1=rand(1,9);
-			$num2=rand(1,9);
-			$total=$num1+$num2;
-			
-			$_SESSION["total"] = $total;
-
-			$display = "$num1 + $num2 = ";
 		}
 	?>
 	
@@ -163,9 +128,8 @@
 		<p>Email address*: <input type="text" name="email"/></p>
 		
 		<p>Please enter the answer for the captcha below:</p>
-		<?php
-			echo "<div id='captcha'>", $display, "</div>";
-		?>
+		<!-- Gets image from captcha.php file -->
+		<p><img src="captcha.php" /></p>
 		<p><input type="text" name="captcha" /></p>
 		
 		<p><input class="button" type="reset" name="reset_button"/><input class="button" type="submit" name="submit_button"/></p>
@@ -176,6 +140,9 @@
 		<?php
 			echo "<p>", $message, "</p>";
 		?>
+		<!-- Disclaimer Message -->
+		<p>Disclaimer</p>
+		<p>This website is created mainly for educational and non-commercial use only. It is a partial fulfillment for completion of unit COS30020 - Web Application Development offered in Swinburne University of Technology, Sarawak Campus for Semester 2, 2019. The web-master and author(s) do not represent the business entity. The content of the pages of this website might be out-dated or inaccurate, thus, the author(s) and web-master does not take any responsibility for incorrect information disseminate or cited from this website.</p>
 	</footer>
 
 </body>

@@ -17,9 +17,9 @@ $text_color = imagecolorallocate($img, 33, 37, 41);
 
 $text = $display;
 
-$font = "verdana.ttf";
+$font = $_SERVER["DOCUMENT_ROOT"]."/WebDevAssignment1/styles/verdana.ttf";
 
-//imagettftext($img, 16, 0, 0, 26, $text_color, $font, $text);
+imagettftext($img, 16, 0, 0, 26, $text_color, $font, $text);
 
 header('Content-type: image/png');
 imagepng($img);
