@@ -1,10 +1,13 @@
+/* Configure header content */
 header{
 	text-align: center;
 }
 
+/* Configure elements with ID */
 #thanks{
-	color: purple;
+	color: grey;
 	font-style: italic;
+	font-size: 125%;
 }
 
 #logo{
@@ -15,16 +18,19 @@ header{
 	text-align: center;
 }
 
+/* Configure body content */
 body{
 	text-align: center;
 	background-color: #01C3FE;
 }
 
+/* Configure footer content */
 footer p{
 	color: #A40505;
 	font-style: bold;
 }
 
+/* Configure table in summary page */
 table{
 	margin-left: auto;
 	margin-right: auto;
@@ -35,6 +41,19 @@ table, th, td{
 	border: 2px solid black;
 }
 
+/* Configure disclaimer section */
+#disclaimer{
+	background-color: white;
+	border: 1px solid black;
+	margin: auto 30%;
+	padding: 1%;
+}
+
+#disclaimer p{
+	color: black;
+}
+
+/* Configure button elements */
 .button{
 	padding: 15px;
 	background-color: orange;
