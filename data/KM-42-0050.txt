@@ -1,0 +1,10 @@
+First name: Lim
+Last name: Teh
+Registration ID: KM-42-0050
+Email address: test@gmail.com
+***Rating***
+Registration and payment: Very Good
+Event timing: Good
+Race route selection: Satisfactory
+Logistic: Poor
+Security: Very Poor

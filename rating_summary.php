@@ -67,7 +67,8 @@ session_start();
 			
 			// Writing data to file section
 			// fopen() opens the file while or die() prints error message if file has failed to be opened
-			$textFile = fopen("data.txt", "w") or die("Failed to open data file.");
+			$fileName = "data/" . $regID . ".txt";
+			$textFile = fopen($fileName, "w") or die("Failed to open data file.");
 			
 			// Setting text file data
 			$dataText = "First name: $fName
